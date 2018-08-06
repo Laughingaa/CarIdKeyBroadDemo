@@ -43,7 +43,7 @@ public class KeyBroadManager  implements KeyboardView.OnKeyboardActionListener {
 
     @Override
     public void onKey(int primaryCode, int[] keyCodes   ) {
-        if (primaryCode == -100002){
+      /*  if (primaryCode == -100002){
             Log.i(TAG,"action is delet");
             if (!TextUtils.isEmpty(editable)){
                 if (editable.length()>0){
@@ -62,7 +62,7 @@ public class KeyBroadManager  implements KeyboardView.OnKeyboardActionListener {
                 keyboardView.setKeyboard(behindKeyBrod);
             }
             System.out.println(String.valueOf(editable));
-        }
+        }*/
 
     }
 

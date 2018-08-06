@@ -2,7 +2,7 @@
 <Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
     android:keyWidth="14.2857%p"
     android:keyHeight="40dp"
-    android:horizontalGap="2dp"
+    android:horizontalGap="1%p"
     android:verticalGap="2dp"
     >
     <Row>
@@ -45,11 +45,11 @@
             />
     </Row>
     <Row>
-        <Key android:codes="23425" android:keyLabel="宁"  android:keyEdgeFlags="left"/>
-        <Key android:codes="26032" android:keyLabel="新"  android:keyEdgeFlags="left"/>
-        <Key android:codes="21488" android:keyLabel="台"  android:keyEdgeFlags="left"/>
-        <Key android:codes="29976" android:keyLabel="甘"  android:keyEdgeFlags="left"/>
-        <Key  android:codes="-100,-200,-300" android:keyLabel="WJ"  android:keyEdgeFlags="left"/>
-        <Key  android:codes="-100002" android:keyLabel="删除"  android:keyWidth="28.5714%p" android:keyEdgeFlags="left"/>
+        <Key  android:keyWidth="14.2857%p" android:codes="23425" android:keyLabel="宁"  android:keyEdgeFlags="left"/>
+        <Key  android:keyWidth="14.2857%p" android:codes="26032" android:keyLabel="新"  android:keyEdgeFlags="left"/>
+        <Key  android:keyWidth="14.2857%p" android:codes="21488" android:keyLabel="台"  android:keyEdgeFlags="left"/>
+        <Key  android:keyWidth="14.2857%p" android:codes="29976" android:keyLabel="甘"  android:keyEdgeFlags="left"/>
+        <Key  android:keyWidth="14.2857%p"  android:codes="-100,-200,-300" android:keyLabel="WJ"  android:keyEdgeFlags="left"/>
+        <Key  android:codes="-100009" android:keyLabel="删除"  android:keyWidth="28.5714%p" android:keyEdgeFlags="left"/>
     </Row>
 </Keyboard>

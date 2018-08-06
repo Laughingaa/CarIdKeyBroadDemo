@@ -3,7 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="ket_bg">#474d4d4d</color>
+    <color name="key_normal_col">#474d4d4d</color>
+    <color name="key_select_col">#874D4D4D</color>
     <color name="white">#ffffff</color>
     <color name="keybroad_bg">#e9e9e9</color>
+    <color name="abc_select_col">#FFE1DEDE</color>
 </resources>

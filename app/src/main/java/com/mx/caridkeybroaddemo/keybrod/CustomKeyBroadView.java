@@ -53,8 +53,9 @@ public class CustomKeyBroadView extends KeyboardView {
                 paint.setTextSize(DisplayUtil.sp2px(context,15));
                 for (Keyboard.Key key :keyList){
                     if (key.codes[0] >= 65 && key.codes[0]<=90) {
-                        Drawable dr = getContext().getResources().getDrawable(R.drawable.key_abc_bg);
+                        Drawable dr = getContext().getResources().getDrawable(R.drawable.abc_selecter_bg);
                         dr.setBounds(key.x, key.y, key.x + key.width, key.y + key.height);
+                        dr.setState(key.getCurrentDrawableState());//添加这句话，否则选中背景 无效
                         dr.draw(canvas);
                         Rect rect = new Rect(key.x, key.y, key.x + key.width, key.y + key.height);
                         Paint.FontMetricsInt fontMetrics = paint.getFontMetricsInt();
