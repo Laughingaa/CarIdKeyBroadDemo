@@ -1,11 +1,15 @@
 package com.mx.caridkeybroaddemo.keybrod;
 
 import android.app.Activity;
+import android.content.Context;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 
 import com.mx.caridkeybroaddemo.R;
@@ -18,20 +22,60 @@ public class KeyBroadManager  implements KeyboardView.OnKeyboardActionListener {
     private CustomKeyBroadView keyboardView;
     private Keyboard firstKeyBrod;
     private Keyboard behindKeyBrod;
-    private Activity activity;
+    private Context context;
     private Editable editable ;
     private static  final String TAG = KeyBroadManager.class.getSimpleName();
     private EditText editText;
-    public KeyBroadManager(Activity activity) {
-        this.activity = activity;
-        keyboardView =  activity.findViewById(R.id.keybroadview);
-        keyboardView.setOnKeyboardActionListener(this);
-         firstKeyBrod = new Keyboard(activity,R.xml.first_keybrod);
-        behindKeyBrod = new Keyboard(activity,R.xml.behind_keybroad);
-        keyboardView.setKeyboard(firstKeyBrod);
-        keyboardView.setPreviewEnabled(true);
-        keyboardView.setEnabled(true);
+    private Animation enterAnimation ;
+    private Animation exitAnimation ;
+    public KeyBroadManager(Context context,CustomKeyBroadView keyboardView) {
+        this.context = context;
+        this.keyboardView = keyboardView;
+        this.keyboardView.setOnKeyboardActionListener(this);
+         firstKeyBrod = new Keyboard(context,R.xml.first_keybrod);
+        behindKeyBrod = new Keyboard(context,R.xml.behind_keybroad);
+        this.keyboardView.setKeyboard(firstKeyBrod);
+        this.keyboardView.setPreviewEnabled(true);
+        this.keyboardView.setEnabled(true);
         editable = Editable.Factory.getInstance().newEditable("");
+        initAnimation(context);
+    }
+    //初始化进入退出动画
+    private void initAnimation(Context context) {
+        enterAnimation = AnimationUtils.loadAnimation(context, R.anim.pop_enter_anim);
+        exitAnimation = AnimationUtils.loadAnimation(context,R.anim.pop_exit_anim);
+        enterAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                KeyBroadManager.this.keyboardView.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        exitAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                KeyBroadManager.this.keyboardView.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
     }
 
     public void bindToEditText(EditText editText){
@@ -113,5 +157,24 @@ public class KeyBroadManager  implements KeyboardView.OnKeyboardActionListener {
     @Override
     public void swipeUp() {
 
+    }
+
+
+
+    public void showKeyBrod(){
+
+        if (keyboardView!=null){
+            keyboardView.startAnimation(enterAnimation);
+        }else {
+            Log.i(TAG,"when showKeyBrod ,keyboardView is null");
+        }
+    }
+
+    public void dismissKeyBroad(){
+        if (keyboardView!=null){
+            keyboardView.startAnimation(exitAnimation);
+        }else {
+            Log.i(TAG,"when dismissKeyBroad ,keyboardView is null");
+        }
     }
 }

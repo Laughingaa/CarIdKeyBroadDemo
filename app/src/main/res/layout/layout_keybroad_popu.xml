@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+   android:padding="5dp"
+    android:layout_width="match_parent"
+    android:background="@color/keybroad_bg"
+    android:layout_height="wrap_content">
+    <com.mx.caridkeybroaddemo.keybrod.CustomKeyBroadView
+        android:id="@+id/keybroadview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:background="@color/keybroad_bg"
+        android:keyBackground="@drawable/keybrod_select_bg"
+        android:keyTextColor="#b4000000"
+        android:keyTextSize="15sp"
+        android:focusableInTouchMode="true"
+        android:shadowRadius="0"
+        android:keyPreviewHeight="0dp"
+        android:verticalCorrection="5dp"
+        android:keyPreviewLayout="@layout/layout_keypreview"
+        android:shadowColor="#b4000000"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="asd"
+        />
+</RelativeLayout>

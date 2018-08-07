@@ -65,7 +65,6 @@ public class CustomKeyBroadView extends KeyboardView {
                         canvas.drawText(key.label.toString(), rect.centerX(), baseline, paint);
 
                     }
-
                     if (key.codes[0] == -100003 || key.codes[0]==-100004){
                         Drawable dr = getContext().getResources().getDrawable(R.drawable.key_placeholder_bg);
                         dr.setBounds(key.x, key.y, key.x + key.width, key.y + key.height);

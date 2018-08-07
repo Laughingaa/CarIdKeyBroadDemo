@@ -77,9 +77,10 @@
             />
         <Key android:codes="48" android:keyLabel="0"
             />
-        <Key android:codes="-100002" android:keyLabel="删除"
+        <Key android:codes="-100002"
             android:keyWidth="21%p"
             android:keyEdgeFlags="right"
+            android:keyIcon="@drawable/icon_key_del"
             />
     </Row>
 </Keyboard>

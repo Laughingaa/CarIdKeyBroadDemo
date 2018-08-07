@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,6 +17,26 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext"
+        >
+
+        <Button
+            android:id="@+id/showpopu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="显示键盘"
+            />
+        <Button
+            android:id="@+id/dismisspopu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="隐藏键盘"
+            />
+    </LinearLayout>
     <com.mx.caridkeybroaddemo.keybrod.CustomKeyBroadView
         android:id="@+id/keybroadview"
         android:layout_width="match_parent"
@@ -29,7 +50,8 @@
         android:shadowRadius="0"
         android:keyPreviewHeight="0dp"
         android:verticalCorrection="5dp"
-        android:keyPreviewLayout="@layout/layout_keypreview"
         android:shadowColor="#b4000000"
-    />
-</LinearLayout>
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        />
+</RelativeLayout>
