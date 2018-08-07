@@ -4,6 +4,7 @@ import android.inputmethodservice.KeyboardView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.EditText;
 
 import com.mx.caridkeybroaddemo.keybrod.CustomKeyBroadView;
 import com.mx.caridkeybroaddemo.keybrod.CustomKeyBrod;
@@ -37,5 +38,7 @@ public class MainActivity extends AppCompatActivity {
         keyboardView.setKeyboard(customKeyBrod);
         keyboardView.setOnKeyboardActionListener(customKeyBrod);*/
         KeyBroadManager keyBroadManager = new KeyBroadManager(this);
+        EditText editText = findViewById(R.id.edittext);
+        keyBroadManager.bindToEditText(editText);
     }
 }

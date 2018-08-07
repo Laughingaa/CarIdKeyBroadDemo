@@ -6,6 +6,7 @@ import android.inputmethodservice.KeyboardView;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.EditText;
 
 import com.mx.caridkeybroaddemo.R;
 
@@ -13,12 +14,14 @@ import com.mx.caridkeybroaddemo.R;
  * Ceate by Lize on 2018/8/6
  */
 public class KeyBroadManager  implements KeyboardView.OnKeyboardActionListener {
+
     private CustomKeyBroadView keyboardView;
     private Keyboard firstKeyBrod;
     private Keyboard behindKeyBrod;
     private Activity activity;
     private Editable editable ;
     private static  final String TAG = KeyBroadManager.class.getSimpleName();
+    private EditText editText;
     public KeyBroadManager(Activity activity) {
         this.activity = activity;
         keyboardView =  activity.findViewById(R.id.keybroadview);
@@ -30,6 +33,11 @@ public class KeyBroadManager  implements KeyboardView.OnKeyboardActionListener {
         keyboardView.setEnabled(true);
         editable = Editable.Factory.getInstance().newEditable("");
     }
+
+    public void bindToEditText(EditText editText){
+        this.editText = editText;
+    }
+
 
     @Override
     public void onPress(int i) {
@@ -43,27 +51,43 @@ public class KeyBroadManager  implements KeyboardView.OnKeyboardActionListener {
 
     @Override
     public void onKey(int primaryCode, int[] keyCodes   ) {
-        if (primaryCode == -100002){
-            Log.i(TAG,"action is delet");
-            if (!TextUtils.isEmpty(editable)){
-                if (editable.length()>0){
-                    editable.delete(editable.length()-1,editable.length());
-                    System.out.println(String.valueOf(editable));
+        if (editText!=null){
+           int editSelectStart = editText.getSelectionStart();
+           Log.i(TAG,"editSelectStart:"+editSelectStart);
+            if (primaryCode == -100002){
+                Log.i(TAG,"action is delet");
+                if (!TextUtils.isEmpty(editable)&& editSelectStart>=1){
+                    if (editable.length()>0){
+                        editable.delete(editSelectStart-1,editSelectStart);
+                    }
+                    editSelectStart = editSelectStart -1;
                 }
-                if (editable.length()==0){
-                    keyboardView.setKeyboard(firstKeyBrod);
+            }else if (primaryCode== -100003 ||primaryCode== -100004){
+                return;
+            }else {
+                String text = Character.toString((char) primaryCode);
+                if (primaryCode ==-100||primaryCode ==-200||primaryCode ==-300){
+                    text = "WJ";
+                }
+                if (editable.length()==0 || editable.length() == editSelectStart){
+                    editable.append(text);
+                    editSelectStart = editable.length();
+                }else {
+                    editable.insert(editSelectStart,text);
+                    editSelectStart = editSelectStart+text.length();
+                }
+                if (editable.length()>= 1){
+                    keyboardView.setKeyboard(behindKeyBrod);
                 }
             }
-        }else if (primaryCode== -100003 ||primaryCode== -100004){
-            return;
+            editText.setText(editable);
+            editText.setSelection(editSelectStart);
+            if (editSelectStart == 0){
+                keyboardView.setKeyboard(firstKeyBrod);
+            }
         }else {
-            editable.append(Character.toString((char) primaryCode));
-            if (editable.length()>= 1){
-                keyboardView.setKeyboard(behindKeyBrod);
-            }
-            System.out.println(String.valueOf(editable));
+            Log.i(TAG,"EditText is null");
         }
-
     }
 
     @Override

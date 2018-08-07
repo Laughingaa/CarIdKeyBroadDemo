@@ -48,6 +48,6 @@
         <Key  android:codes="21488" android:keyLabel="台" />
         <Key  android:codes="29976" android:keyLabel="甘" />
         <Key   android:codes="-100,-200,-300" android:keyLabel="WJ"  />
-        <Key  android:codes="-100009" android:keyLabel="删除"  android:keyWidth="29.5714%p" />
+        <Key  android:codes="-100002" android:keyLabel="删除"  android:keyWidth="29.5714%p" />
     </Row>
 </Keyboard>
