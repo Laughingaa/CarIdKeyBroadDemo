@@ -13,9 +13,9 @@ import com.mx.caridkeybroaddemo.R;
  * Ceate by Lize on 2018/8/6
  */
 public class KeyBroadManager  implements KeyboardView.OnKeyboardActionListener {
-    private KeyboardView keyboardView;
-    private CustomKeyBrod firstKeyBrod;
-    private CustomKeyBrod behindKeyBrod;
+    private CustomKeyBroadView keyboardView;
+    private Keyboard firstKeyBrod;
+    private Keyboard behindKeyBrod;
     private Activity activity;
     private Editable editable ;
     private static  final String TAG = KeyBroadManager.class.getSimpleName();
@@ -23,8 +23,8 @@ public class KeyBroadManager  implements KeyboardView.OnKeyboardActionListener {
         this.activity = activity;
         keyboardView =  activity.findViewById(R.id.keybroadview);
         keyboardView.setOnKeyboardActionListener(this);
-         firstKeyBrod = new CustomKeyBrod(activity,R.xml.first_keybrod);
-        behindKeyBrod = new CustomKeyBrod(activity,R.xml.behind_keybroad);
+         firstKeyBrod = new Keyboard(activity,R.xml.first_keybrod);
+        behindKeyBrod = new Keyboard(activity,R.xml.behind_keybroad);
         keyboardView.setKeyboard(firstKeyBrod);
         keyboardView.setPreviewEnabled(true);
         keyboardView.setEnabled(true);
@@ -43,7 +43,7 @@ public class KeyBroadManager  implements KeyboardView.OnKeyboardActionListener {
 
     @Override
     public void onKey(int primaryCode, int[] keyCodes   ) {
-      /*  if (primaryCode == -100002){
+        if (primaryCode == -100002){
             Log.i(TAG,"action is delet");
             if (!TextUtils.isEmpty(editable)){
                 if (editable.length()>0){
@@ -62,7 +62,7 @@ public class KeyBroadManager  implements KeyboardView.OnKeyboardActionListener {
                 keyboardView.setKeyboard(behindKeyBrod);
             }
             System.out.println(String.valueOf(editable));
-        }*/
+        }
 
     }
 

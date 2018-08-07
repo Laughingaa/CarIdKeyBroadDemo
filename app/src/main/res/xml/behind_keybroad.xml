@@ -66,31 +66,16 @@
     <Row
         android:keyHeight="40dp"
         >
-        <Key android:codes="-100004"
-            android:keyEdgeFlags="left"
-            android:keyWidth="10%p"
-            android:horizontalGap="1%p"
-            android:keyLabel=""
+        <Key android:codes="-100004" android:keyLabel="0"
             />
-        <Key android:codes="86" android:keyLabel="V"
-            android:keyEdgeFlags="left"
-            android:keyWidth="10%p"
-            android:horizontalGap="1%p"
-            />
-        <Key android:codes="87" android:keyLabel="W"  android:horizontalGap="1%p"  android:keyWidth="10%p" android:keyEdgeFlags="left"/>
-        <Key android:codes="88" android:keyLabel="X"  android:horizontalGap="1%p"  android:keyWidth="10%p" android:keyEdgeFlags="left"/>
-        <Key android:codes="89" android:keyLabel="Y"  android:horizontalGap="1%p" android:keyWidth="10%p" android:keyEdgeFlags="left"/>
-        <Key android:codes="90" android:keyLabel="Z" android:horizontalGap="1%p" android:keyWidth="10%p" android:keyEdgeFlags="left"/>
-        <Key android:codes="-100003"
-            android:keyEdgeFlags="left"
-            android:keyWidth="10%p"
-            android:horizontalGap="1%p"
-            android:keyLabel=""
-
+        <Key android:codes="86" android:keyLabel="V" />
+        <Key android:codes="87" android:keyLabel="W"  />
+        <Key android:codes="88" android:keyLabel="X" />
+        <Key android:codes="89" android:keyLabel="Y" />
+        <Key android:codes="90" android:keyLabel="Z"/>
+        <Key android:codes="-100003" android:keyLabel="0"
             />
         <Key android:codes="48" android:keyLabel="0"
-           android:keyWidth="10%p"
-            android:keyEdgeFlags="right"
             />
         <Key android:codes="-100002" android:keyLabel="删除"
             android:keyWidth="21%p"

@@ -27,7 +27,7 @@
         android:focusableInTouchMode="true"
         android:shadowRadius="0"
         android:keyPreviewHeight="0dp"
-        android:verticalCorrection="0dp"
+        android:verticalCorrection="5dp"
         android:keyPreviewLayout="@layout/layout_keypreview"
         android:shadowColor="#b4000000"
     />

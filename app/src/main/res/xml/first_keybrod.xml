@@ -33,9 +33,7 @@
         <Key android:codes="29756" android:keyLabel="琼"/>
     </Row>
     <Row >
-        <Key android:codes="28189" android:keyLabel="渝"
-            android:keyEdgeFlags="left"
-            />
+        <Key android:codes="28189" android:keyLabel="渝" />
         <Key android:codes="24029" android:keyLabel="川"/>
         <Key android:codes="36149" android:keyLabel="贵"/>
         <Key android:codes="20113" android:keyLabel="云"/>
@@ -45,11 +43,11 @@
             />
     </Row>
     <Row>
-        <Key  android:keyWidth="14.2857%p" android:codes="23425" android:keyLabel="宁"  android:keyEdgeFlags="left"/>
-        <Key  android:keyWidth="14.2857%p" android:codes="26032" android:keyLabel="新"  android:keyEdgeFlags="left"/>
-        <Key  android:keyWidth="14.2857%p" android:codes="21488" android:keyLabel="台"  android:keyEdgeFlags="left"/>
-        <Key  android:keyWidth="14.2857%p" android:codes="29976" android:keyLabel="甘"  android:keyEdgeFlags="left"/>
-        <Key  android:keyWidth="14.2857%p"  android:codes="-100,-200,-300" android:keyLabel="WJ"  android:keyEdgeFlags="left"/>
-        <Key  android:codes="-100009" android:keyLabel="删除"  android:keyWidth="28.5714%p" android:keyEdgeFlags="left"/>
+        <Key android:codes="23425" android:keyLabel="宁"  />
+        <Key  android:codes="26032" android:keyLabel="新"  />
+        <Key  android:codes="21488" android:keyLabel="台" />
+        <Key  android:codes="29976" android:keyLabel="甘" />
+        <Key   android:codes="-100,-200,-300" android:keyLabel="WJ"  />
+        <Key  android:codes="-100009" android:keyLabel="删除"  android:keyWidth="29.5714%p" />
     </Row>
 </Keyboard>
