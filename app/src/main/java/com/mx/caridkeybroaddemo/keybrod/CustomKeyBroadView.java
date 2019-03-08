@@ -9,6 +9,7 @@ import android.graphics.drawable.Drawable;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.util.AttributeSet;
+import android.util.Log;
 
 import com.mx.caridkeybroaddemo.DisplayUtil;
 import com.mx.caridkeybroaddemo.R;
@@ -37,7 +38,6 @@ public class CustomKeyBroadView extends KeyboardView {
 
     @Override
     public void onDraw(Canvas canvas) {
-
         super.onDraw(canvas);
         Keyboard keyboard = getKeyboard();
         if (keyboard!=null){
@@ -47,11 +47,11 @@ public class CustomKeyBroadView extends KeyboardView {
             if (keyList!=null && keyList.size()>0){
                 Paint paint = new Paint();
                 paint.setTextAlign(Paint.Align.CENTER);
-                Typeface font = Typeface.create(Typeface.DEFAULT, Typeface.NORMAL);
-                paint.setTypeface(font);
+                paint.setTypeface(Typeface.DEFAULT);
                 paint.setAntiAlias(true);
                 paint.setTextSize(DisplayUtil.sp2px(context,15));
                 for (Keyboard.Key key :keyList){
+                    Log.i("onDraw","Lable:"+key.label);
                     if (key.codes[0] >= 65 && key.codes[0]<=90) {
                         Drawable dr = getContext().getResources().getDrawable(R.drawable.abc_selecter_bg);
                         dr.setBounds(key.x, key.y, key.x + key.width, key.y + key.height);
@@ -63,16 +63,16 @@ public class CustomKeyBroadView extends KeyboardView {
                         // 下面这行是实现水平居中，drawText对应改为传入targetRect.centerX()
                         paint.setTextAlign(Paint.Align.CENTER);
                         canvas.drawText(key.label.toString(), rect.centerX(), baseline, paint);
-
                     }
-                    if (key.codes[0] == -100003 || key.codes[0]==-100004){
+                 /*   if (key.codes[0] == -100003 || key.codes[0]==-100004){
                         Drawable dr = getContext().getResources().getDrawable(R.drawable.key_placeholder_bg);
                         dr.setBounds(key.x, key.y, key.x + key.width, key.y + key.height);
                         dr.draw(canvas);
-                    }
+                    }*/
                 }
             }
         }
-
     }
+
+
 }

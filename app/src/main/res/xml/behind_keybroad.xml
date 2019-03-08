@@ -1,86 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
-    android:horizontalGap="1%p"
-    android:verticalGap="0.5%p"
 
+    android:verticalGap="7dp"
+    android:keyHeight="42dp"
+    android:keyWidth="9.7777%p"
     >
-    <Row
-        android:keyWidth="14.2857%p"
-        android:keyHeight="35dp"
-        >
-        <Key android:codes="28207" popupCharacters="港" android:keyLabel="港"/>
-        <Key android:codes="28595"  popupCharacters="澳" android:keyLabel="澳"/>
-        <Key android:codes="23398"  popupCharacters="学" android:keyLabel="学"/>
-        <Key android:codes="39046"  popupCharacters="领" android:keyLabel="领"/>
-        <Key android:codes="20351"  popupCharacters="使" android:keyLabel="使"/>
-        <Key android:codes="35686"  popupCharacters="警" android:keyLabel="警"/>
-        <Key android:codes="25346"  popupCharacters="挂" android:keyLabel="挂"/>
-    </Row>
-    <Row
-        android:keyWidth="10%p"
-        android:keyHeight="40dp"
-        >
-        <Key android:codes="65" android:keyLabel="A"
-            android:iconPreview="@drawable/key_abc_bg"
+    <Row>
+        <Key
+            android:codes="65"
+            android:keyLabel="A" />
+        <Key
+            android:codes="66"
+            android:keyLabel="B"
+            android:horizontalGap="1.5%p"
             />
-        <Key android:codes="66" android:keyLabel="B"/>
-        <Key android:codes="67" android:keyLabel="C"/>
-        <Key android:codes="68" android:keyLabel="D"/>
-        <Key android:codes="69" android:keyLabel="E"/>
-        <Key android:codes="70" android:keyLabel="F"/>
-        <Key android:codes="71" android:keyLabel="G"/>
-        <Key android:codes="49" android:keyLabel="1"/>
-        <Key android:codes="50" android:keyLabel="2"/>
-        <Key android:codes="51" android:keyLabel="3"/>
-    </Row>
-    <Row
-        android:keyWidth="10%p"
-        android:keyHeight="40dp"
-        >
-        <Key android:codes="72" android:keyLabel="H"/>
-        <Key android:codes="73" android:keyLabel="I"/>
-        <Key android:codes="74" android:keyLabel="J"/>
-        <Key android:codes="75" android:keyLabel="K"/>
-        <Key android:codes="76" android:keyLabel="L"/>
-        <Key android:codes="77" android:keyLabel="M"/>
-        <Key android:codes="78" android:keyLabel="N"/>
-        <Key android:codes="52" android:keyLabel="4"/>
-        <Key android:codes="53" android:keyLabel="5"/>
-        <Key android:codes="54" android:keyLabel="6"/>
-    </Row>
-    <Row
-        android:keyWidth="10%p"
-        android:keyHeight="40dp"
-        >
-        <Key android:codes="79" android:keyLabel="O"/>
-        <Key android:codes="80" android:keyLabel="P"/>
-        <Key android:codes="81" android:keyLabel="Q"/>
-        <Key android:codes="82" android:keyLabel="R"/>
-        <Key android:codes="83" android:keyLabel="S"/>
-        <Key android:codes="84" android:keyLabel="T"/>
-        <Key android:codes="85" android:keyLabel="U"/>
-        <Key android:codes="55" android:keyLabel="7"/>
-        <Key android:codes="56" android:keyLabel="8"/>
-        <Key android:codes="57" android:keyLabel="9"/>
-    </Row>
-    <Row
-        android:keyHeight="40dp"
-        >
-        <Key android:codes="-100004" android:keyLabel="0"
+        <Key
+            android:codes="67"
+            android:keyLabel="C"
+            android:horizontalGap="1.5%p"
             />
-        <Key android:codes="86" android:keyLabel="V" />
-        <Key android:codes="87" android:keyLabel="W"  />
-        <Key android:codes="88" android:keyLabel="X" />
-        <Key android:codes="89" android:keyLabel="Y" />
-        <Key android:codes="90" android:keyLabel="Z"/>
-        <Key android:codes="-100003" android:keyLabel="0"
+        <Key
+            android:codes="68"
+            android:keyLabel="D"
+            android:horizontalGap="1.5%p"
             />
-        <Key android:codes="48" android:keyLabel="0"
+        <Key
+            android:codes="69"
+            android:keyLabel="E"
+            android:horizontalGap="1.5%p"
             />
-        <Key android:codes="-100002"
-            android:keyWidth="21%p"
-            android:keyEdgeFlags="right"
+        <Key
+            android:codes="70"
+            android:keyLabel="F"
+            android:horizontalGap="1.5%p"
+            />
+        <Key
+            android:codes="48"
+            android:keyLabel="0"
+            android:horizontalGap="1.5%p"
+            />
+
+        <Key
+            android:codes="-100002"
             android:keyIcon="@drawable/icon_key_del"
+            android:horizontalGap="1.5%p"
+            android:keyWidth="21.05%p" />
+    </Row>
+    <Row
+        android:keyHeight="42dp"
+        android:keyWidth="9.7%p">
+        <Key
+            android:codes="71"
+            android:keyLabel="G" />
+        <Key
+            android:codes="72"
+            android:keyLabel="H"
+            android:horizontalGap="1.5%p"
             />
+
+        <Key
+            android:codes="74"
+            android:keyLabel="J"
+            android:horizontalGap="1.5%p"
+            />
+        <Key
+            android:codes="75"
+            android:keyLabel="K"
+            android:horizontalGap="1.5%p"
+            />
+        <Key
+            android:codes="76"
+            android:keyLabel="L"
+            android:horizontalGap="1.5%p"
+            />
+        <Key
+            android:codes="77"
+            android:keyLabel="M"
+            android:horizontalGap="1.5%p"
+            />
+
+        <Key
+            android:codes="49"
+            android:keyLabel="1"
+            android:horizontalGap="1.5%p"
+            />
+        <Key
+            android:codes="50"
+            android:keyLabel="2"
+            android:horizontalGap="1.5%p"
+            />
+        <Key
+            android:codes="51"
+            android:keyLabel="3"
+            android:horizontalGap="1.5%p"
+            />
+
+    </Row>
+    <Row
+        android:keyHeight="42dp"
+        android:keyWidth="9.7%p">
+        <Key
+            android:codes="78"
+            android:keyLabel="N"
+            />
+        <Key
+            android:codes="80"
+            android:keyLabel="P"
+            android:horizontalGap="1.5%p"
+            />
+        <Key
+            android:codes="81"
+            android:keyLabel="Q"
+            android:horizontalGap="1.5%p"
+            />
+        <Key
+            android:codes="82"
+            android:keyLabel="R"
+
+            android:horizontalGap="1.5%p"/>
+        <Key
+            android:codes="83"
+            android:keyLabel="S"
+            android:horizontalGap="1.5%p"
+            />
+        <Key
+            android:codes="84"
+            android:keyLabel="T"
+            android:horizontalGap="1.5%p"
+            />
+
+        <Key
+            android:codes="52"
+            android:keyLabel="4"
+            android:horizontalGap="1.5%p"
+            />
+        <Key
+            android:codes="53"
+            android:keyLabel="5"
+            android:horizontalGap="1.5%p"
+            />
+        <Key
+            android:codes="54"
+            android:keyLabel="6"
+            android:horizontalGap="1.5%p"
+            />
+
+    </Row>
+    <Row   android:keyHeight="42dp"
+        android:keyWidth="9.7%p"
+        >
+        <Key
+            android:codes="85"
+            android:keyLabel="U"
+
+            />
+        <Key
+            android:codes="86"
+            android:keyLabel="V"
+            android:horizontalGap="1.5%p"
+            />
+        <Key
+            android:codes="87"
+            android:keyLabel="W"
+            android:horizontalGap="1.5%p"
+            />
+        <Key
+            android:codes="88"
+            android:keyLabel="X"
+            android:horizontalGap="1.5%p"
+            />
+        <Key
+            android:codes="89"
+            android:keyLabel="Y"
+            android:horizontalGap="1.5%p"
+            />
+        <Key
+            android:codes="90"
+            android:keyLabel="Z"
+            android:horizontalGap="1.5%p"
+            />
+        <Key
+            android:codes="55"
+            android:keyLabel="7"
+            android:horizontalGap="1.5%p"
+            />
+        <Key
+            android:codes="56"
+            android:keyLabel="8"
+            android:horizontalGap="1.5%p"
+            />
+        <Key
+            android:codes="57"
+            android:keyLabel="9"
+            android:horizontalGap="1.5%p"
+            />
+
+    </Row>
+    <Row
+        android:keyHeight="35dp"
+        android:keyWidth="13%p"
+        android:horizontalGap="1.5%p"
+        >
+        <Key
+            popupCharacters="港"
+            android:codes="28207"
+            android:keyLabel="港"
+
+            />
+        <Key
+            popupCharacters="澳"
+            android:codes="28595"
+            android:keyLabel="澳"
+
+            />
+        <Key
+            popupCharacters="学"
+            android:codes="23398"
+            android:keyLabel="学"
+
+            />
+        <Key
+            popupCharacters="领"
+            android:codes="39046"
+
+            android:keyLabel="领" />
+        <Key
+            popupCharacters="使"
+            android:codes="20351"
+            android:keyLabel="使"
+
+            />
+        <Key
+            popupCharacters="警"
+            android:codes="35686"
+            android:keyLabel="警"
+            />
+        <Key
+
+            android:codes="25346"
+            android:keyLabel="挂" />
     </Row>
 </Keyboard>
